@@ -1,4 +1,4 @@
-import BottleIcon from "../catalog/BottleIcon.jsx";
+import ProductImage from "../catalog/ProductImage.jsx";
 import { formatCLP } from "../../utils/formatCurrency.js";
 
 export default function CartItem({ item, onIncrement, onDecrement, onRemove }) {
@@ -7,7 +7,7 @@ export default function CartItem({ item, onIncrement, onDecrement, onRemove }) {
   return (
     <div className="flex gap-3.5 py-4 border-b border-brand-line">
       <div className="w-13 flex-shrink-0">
-        <BottleIcon family={product.family} uid={`cart-${product.id}`} size={52} />
+        <ProductImage product={product} size={52} />
       </div>
       <div className="flex-1 min-w-0">
         <h4 className="font-display text-base font-semibold mb-0.5">{product.name}</h4>

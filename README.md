@@ -13,6 +13,18 @@ npm run dev
 
 Abre http://localhost:5173
 
+## Agregar fotos reales de los productos
+
+Cada producto en `src/data/products.js` tiene un campo `image`. Dos formas de usarlo:
+
+1. **Foto local**: coloca el archivo en `public/images/products/` y escribe la ruta
+   en el producto, ej: `image: "/images/products/khamrah.jpg"`.
+2. **URL externa**: pega directamente el link de la imagen, ej:
+   `image: "https://.../khamrah.jpg"`.
+
+Si `image` queda vacío (`""`), o la URL falla, el catálogo muestra automáticamente
+un ícono de botella ilustrado como respaldo — nunca se ve una imagen rota.
+
 ## Estructura
 
 ```

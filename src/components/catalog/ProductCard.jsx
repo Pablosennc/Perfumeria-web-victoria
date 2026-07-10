@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BottleIcon from "./BottleIcon.jsx";
+import ProductImage from "./ProductImage.jsx";
 import { formatCLP } from "../../utils/formatCurrency.js";
 
 export default function ProductCard({ product, onAdd }) {
@@ -14,7 +14,7 @@ export default function ProductCard({ product, onAdd }) {
   return (
     <div className="group flex flex-col bg-gradient-to-b from-brand-panel2 to-brand-panel border border-brand-line rounded-2xl p-5 hover:-translate-y-1 hover:border-brand-gold hover:shadow-2xl hover:shadow-black/40 transition-all">
       <div className="h-40 flex items-center justify-center mb-3 group-hover:-rotate-3 group-hover:scale-105 transition-transform">
-        <BottleIcon family={product.family} uid={`card-${product.id}`} size={100} />
+        <ProductImage product={product} size={100} />
       </div>
 
       <p className="text-[10px] tracking-[0.18em] uppercase text-brand-gold font-bold mb-1.5">
