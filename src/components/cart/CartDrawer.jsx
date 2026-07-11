@@ -15,12 +15,12 @@ export default function CartDrawer({ isOpen, onClose, cart }) {
     <>
       <div
         onClick={onClose}
-        className={`fixed inset-0 bg-black/55 z-50 transition-opacity ${
+        className={`fixed inset-0 bg-black/60 z-50 transition-opacity ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       />
       <aside
-        className={`fixed top-0 right-0 h-full w-[400px] max-w-[92vw] bg-brand-paper border-l border-brand-borderLight z-[60] flex flex-col transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-[400px] max-w-[92vw] bg-white text-brand-ink shadow-2xl shadow-black/40 z-[60] flex flex-col transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

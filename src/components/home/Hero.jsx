@@ -1,6 +1,23 @@
+import { SITE } from "../../config/site.js";
+
 export default function Hero() {
+  const hasImage = Boolean(SITE.heroImage);
+
+  const backgroundStyle = hasImage
+    ? {
+        backgroundImage: `linear-gradient(180deg, rgba(10,10,10,0.55), rgba(10,10,10,0.75)), url(${SITE.heroImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }
+    : undefined;
+
   return (
-    <header className="relative px-6 md:px-10 pt-20 md:pt-28 pb-20 text-center text-brand-ivory bg-[radial-gradient(ellipse_at_50%_-10%,#1c1815_0%,#0a0a0a_60%)]">
+    <header
+      style={backgroundStyle}
+      className={`relative px-6 md:px-10 pt-20 md:pt-28 pb-20 text-center text-brand-ivory ${
+        hasImage ? "" : "bg-[radial-gradient(ellipse_at_50%_-10%,#1c1815_0%,#0a0a0a_60%)]"
+      }`}
+    >
       <p className="text-[11px] tracking-[0.28em] uppercase text-brand-gold font-bold mb-4">
         Perfumería de autor
       </p>

@@ -13,6 +13,14 @@ npm run dev
 
 Abre http://localhost:5173
 
+## Foto de banner (hero)
+
+En `src/config/site.js`, el campo `heroImage` acepta una URL o ruta local
+(ej: `/images/banner/promo.jpg`, colocando el archivo en `public/images/banner/`).
+Si lo dejas vacío, se usa el fondo degradado negro/dorado actual. Cuando tengas
+una foto tipo banner o de campaña promocional, solo pégala ahí — no hay que
+tocar el componente `Hero.jsx`.
+
 ## Agregar fotos reales de los productos
 
 Cada producto en `src/data/products.js` tiene un campo `image`. Dos formas de usarlo:
@@ -49,6 +57,10 @@ Principios aplicados:
 
 ## Próximos pasos sugeridos (para producción)
 
+0. La barra de búsqueda y el botón "Filtrar" (arriba de las categorías) están
+   deshabilitados a propósito, como preview de "próximamente". Cuando se
+   decida seguir con el proyecto, se conecta la búsqueda por nombre/marca y
+   filtros por precio o familia olfativa sobre `PRODUCTS`.
 1. Reemplazar `src/data/products.js` por un cliente de Supabase (`supabase-js`),
    manteniendo el mismo `Product` shape.
 2. Agregar autenticación de administrador para que el dueño suba productos desde un panel.
