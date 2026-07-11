@@ -13,13 +13,22 @@ npm run dev
 
 Abre http://localhost:5173
 
-## Foto de banner (hero)
+## Banner principal (carrusel de productos)
 
-En `src/config/site.js`, el campo `heroImage` acepta una URL o ruta local
-(ej: `/images/banner/promo.jpg`, colocando el archivo en `public/images/banner/`).
-Si lo dejas vacío, se usa el fondo degradado negro/dorado actual. Cuando tengas
-una foto tipo banner o de campaña promocional, solo pégala ahí — no hay que
-tocar el componente `Hero.jsx`.
+El hero ya no es texto rotativo — es una vitrina que muestra, uno a la vez,
+los productos con `featured: true` en `products.js` (foto grande, rating,
+precio y botón "Añadir al carrito" funcional). Rota sola cada 5 segundos, se
+pausa al pasar el mouse, y tiene puntos de navegación manual. Para cambiar
+qué productos aparecen ahí, edita el campo `featured` en `products.js`.
+
+## Ratings
+
+Cada producto en `products.js` tiene `rating` y `reviewCount` — son **datos
+inventados** para el MVP. No existe una API pública de Fragrantica; hacer
+scraping de ese sitio no es una base confiable (términos de servicio, datos
+que pueden romperse en cualquier momento). En producción, lo recomendable
+es que estos valores salgan de reseñas reales cargadas desde un panel de
+administración.
 
 ## Agregar fotos reales de los productos
 

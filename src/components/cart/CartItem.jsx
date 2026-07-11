@@ -29,12 +29,12 @@ export default function CartItem({ item, onIncrement, onDecrement, onRemove }) {
             </button>
           </div>
           <div className="text-right">
-            <div className="font-display text-sm text-brand-goldDark font-bold">
+            <div className="font-display text-xl text-brand-goldDark font-bold leading-none">
               {formatCLP(lineTotal)}
             </div>
             <button
               onClick={() => onRemove(product.id)}
-              className="text-[11px] text-brand-inkMuted underline hover:text-brand-goldDark"
+              className="text-[11px] text-brand-inkMuted underline hover:text-brand-goldDark mt-1 inline-block"
             >
               Quitar
             </button>

@@ -20,22 +20,30 @@
  *   2) una URL externa directa a la imagen, ej: "https://.../khamrah.jpg"
  *   Si queda vacío (""), el catálogo muestra automáticamente el ícono SVG
  *   de respaldo coloreado según `family`, así nunca se ve una imagen rota.
+ * @property {number} rating - calificación de 0 a 5 (dato inventado para el MVP;
+ *   no existe una API pública de Fragrantica — en producción esto debería salir
+ *   de reseñas reales cargadas por la tienda).
+ * @property {number} reviewCount - cantidad de reseñas (dato inventado para el MVP).
+ * @property {boolean} [featured] - si aparece en el hero (vitrina rotativa de arriba).
  */
 
 /** @type {Product[]} */
 export const PRODUCTS = [
-  { id: 1, name: "Khamrah", brand: "Lattafa", category: "arabe", family: "amber", price: 28000, note: "Especiado oriental — canela, dátiles y vainilla cálida.", image: "public/images/products/Khamrah.jpg" },
-  { id: 2, name: "Amber Oud", brand: "Al Haramain", category: "arabe", family: "oud", price: 45000, note: "Oud profundo con ámbar resinoso y toques de rosa.", image: "public/images/products/AmberOud.jpg" },
-  { id: 3, name: "Hawas Tropical", brand: "Rasasi", category: "arabe", family: "citrus", price: 38000, note: "Tropical, dulce y envolvente.", image: "public/images/products/HawasTropical.jpg" },
-  { id: 4, name: "Shaghaf Oud", brand: "Swiss Arabian", category: "arabe", family: "oud", price: 52000, note: "Oud intenso, ahumado, para noches largas.", image: "public/images/products/ShaghafOud.jpg" },
-  { id: 5, name: "Hawas", brand: "Rasasi", category: "arabe", family: "citrus", price: 32000, note: "Fresco especiado con salida cítrica vibrante.", image: "public/images/products/Hawas.jpg" },
-  { id: 6, name: "Fakhar", brand: "Lattafa", category: "arabe", family: "rose", price: 27000, note: "Floral oriental, rosa y azafrán.", image: "public/images/products/Fakhar.jpg" },
-  { id: 7, name: "Sauvage EDT 100ml", brand: "Dior", category: "disenador", family: "citrus", price: 115000, note: "Fresco amaderado, bergamota y ambroxan.", image: "public/images/products/Sauvage.jpg" },
-  { id: 8, name: "Black Opium 90ml", brand: "YSL", category: "disenador", family: "rose", price: 98000, note: "Floral gourmand, café y vainilla.", image: "public/images/products/BlackOpium.jpg" },
-  { id: 9, name: "Bleu de Chanel 100ml", brand: "Chanel", category: "disenador", family: "citrus", price: 135000, note: "Cítrico amaderado, elegante y versátil.", image: "public/images/products/BleuChanel.jpg" },
-  { id: 10, name: "212 VIP 80ml", brand: "Carolina Herrera", category: "disenador", family: "rose", price: 89000, note: "Floral afrutado, dorado y festivo.", image: "public/images/products/212VIP.jpg" },
-  { id: 11, name: "Eros 100ml", brand: "Versace", category: "disenador", family: "citrus", price: 92000, note: "Fresco especiado, menta y vainilla.", image: "public/images/products/ErosVersace.jpg" },
+  { id: 1, name: "Khamrah", brand: "Lattafa", category: "arabe", family: "amber", price: 28000, note: "Especiado oriental — canela, dátiles y vainilla cálida.", image: "/images/products/Khamrah.jpg", rating: 4.7, reviewCount: 312, featured: true },
+  { id: 2, name: "Amber Oud", brand: "Al Haramain", category: "arabe", family: "oud", price: 45000, note: "Oud profundo con ámbar resinoso y toques de rosa.", image: "/images/products/AmberOud.jpg", rating: 4.5, reviewCount: 128 },
+  { id: 3, name: "Hawas Tropical", brand: "Rasasi", category: "arabe", family: "citrus", price: 38000, note: "Tropical, dulce y envolvente.", image: "/images/products/HawasTropical.jpg", rating: 4.3, reviewCount: 94 },
+  { id: 4, name: "Shaghaf Oud", brand: "Swiss Arabian", category: "arabe", family: "oud", price: 52000, note: "Oud intenso, ahumado, para noches largas.", image: "/images/products/ShaghafOud.jpg", rating: 4.8, reviewCount: 201, featured: true },
+  { id: 5, name: "Hawas", brand: "Rasasi", category: "arabe", family: "citrus", price: 32000, note: "Fresco especiado con salida cítrica vibrante.", image: "/images/products/Hawas.jpg", rating: 4.4, reviewCount: 156 },
+  { id: 6, name: "Fakhar", brand: "Lattafa", category: "arabe", family: "rose", price: 27000, note: "Floral oriental, rosa y azafrán.", image: "/images/products/Fakhar.jpg", rating: 4.2, reviewCount: 67 },
+  { id: 7, name: "Sauvage EDT 100ml", brand: "Dior", category: "disenador", family: "citrus", price: 115000, note: "Fresco amaderado, bergamota y ambroxan.", image: "/images/products/Sauvage.jpg", rating: 4.9, reviewCount: 540, featured: true },
+  { id: 8, name: "Black Opium 90ml", brand: "YSL", category: "disenador", family: "rose", price: 98000, note: "Floral gourmand, café y vainilla.", image: "/images/products/BlackOpium.jpg", rating: 4.6, reviewCount: 289 },
+  { id: 9, name: "Bleu de Chanel 100ml", brand: "Chanel", category: "disenador", family: "citrus", price: 135000, note: "Cítrico amaderado, elegante y versátil.", image: "/images/products/BleuChanel.jpg", rating: 4.8, reviewCount: 412, featured: true },
+  { id: 10, name: "212 VIP 80ml", brand: "Carolina Herrera", category: "disenador", family: "rose", price: 89000, note: "Floral afrutado, dorado y festivo.", image: "/images/products/212VIP.jpg", rating: 4.3, reviewCount: 103 },
+  { id: 11, name: "Eros 100ml", brand: "Versace", category: "disenador", family: "citrus", price: 92000, note: "Fresco especiado, menta y vainilla.", image: "/images/products/ErosVersace.jpg", rating: 4.5, reviewCount: 178 },
 ];
+
+/** Productos marcados como destacados — fuente única para el hero. */
+export const FEATURED_PRODUCTS = PRODUCTS.filter((p) => p.featured);
 
 export const CATEGORIES = [
   { value: "todos", label: "Todos" },
