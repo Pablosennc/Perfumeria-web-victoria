@@ -14,14 +14,14 @@ export default function CategoryFilter({ active, onChange, resultCount }) {
             className={`px-5 py-2 rounded-full text-sm border transition-colors ${
               active === cat.value
                 ? "bg-brand-gold border-brand-gold text-brand-black font-bold"
-                : "border-brand-line text-brand-muted hover:border-brand-gold hover:text-brand-goldLight"
+                : "border-brand-borderLight text-brand-inkMuted hover:border-brand-gold hover:text-brand-goldDark"
             }`}
           >
             {cat.label}
           </button>
         ))}
       </div>
-      <span className="text-sm text-brand-muted">
+      <span className="text-sm text-brand-inkMuted">
         {resultCount} fragancia{resultCount === 1 ? "" : "s"}
       </span>
     </section>

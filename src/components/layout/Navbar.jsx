@@ -2,7 +2,7 @@ import logo from "../../assets/logo.png";
 
 export default function Navbar({ totalItems, onCartClick }) {
   return (
-    <nav className="sticky top-0 z-40 flex items-center justify-between px-6 md:px-10 py-4 bg-brand-black/90 backdrop-blur-md border-b border-brand-line">
+    <nav className="sticky top-0 z-40 flex items-center justify-between px-6 md:px-10 py-4 text-brand-ivory bg-brand-black/90 backdrop-blur-md border-b border-brand-line">
       <div className="flex items-center gap-3">
         <img src={logo} alt="Julio Joyas" className="w-10 h-10 rounded-full" />
         <div className="font-display text-xl tracking-wide leading-none">

@@ -15,6 +15,13 @@ export default {
           goldDark: "#b9711e",
           ivory: "#f4ede0",
           muted: "#a89c8a",
+          // Paleta clara: zona de catálogo y carrito, pensada para que
+          // las fotos de producto con fondo blanco se integren sin recuadros.
+          cream: "#faf8f4",
+          paper: "#ffffff",
+          ink: "#171310",
+          inkMuted: "#8a7d6c",
+          borderLight: "rgba(23, 19, 16, 0.09)",
         },
       },
       fontFamily: {

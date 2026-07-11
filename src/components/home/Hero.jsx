@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <header className="relative px-6 md:px-10 pt-20 md:pt-28 pb-20 text-center bg-[radial-gradient(ellipse_at_50%_-10%,#1c1815_0%,#0a0a0a_60%)]">
+    <header className="relative px-6 md:px-10 pt-20 md:pt-28 pb-20 text-center text-brand-ivory bg-[radial-gradient(ellipse_at_50%_-10%,#1c1815_0%,#0a0a0a_60%)]">
       <p className="text-[11px] tracking-[0.28em] uppercase text-brand-gold font-bold mb-4">
         Perfumería de autor
       </p>
