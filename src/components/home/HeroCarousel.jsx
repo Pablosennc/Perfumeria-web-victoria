@@ -45,9 +45,9 @@ export default function HeroCarousel({ onAdd }) {
     <header
       onMouseEnter={stopTimer}
       onMouseLeave={startTimer}
-      className="relative overflow-hidden px-6 md:px-10 pt-3xl pb-3xl md:pt-3xl md:pb-3xl bg-gradient-to-b from-white to-muted"
+      className="relative overflow-hidden px-6 md:px-10 pt-3xl pb-3xl md:pt-3xl md:pb-3xl bg-[#F5F2EB] border-b border-line"
     >
-      {/* Resplandores de fondo suaves */}
+      {/* Resplandores de fondo sutiles */}
       <div className="absolute -top-24 -left-16 w-72 h-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-24 -right-16 w-72 h-72 rounded-full bg-secondary/10 blur-3xl pointer-events-none" />
 
@@ -66,16 +66,15 @@ export default function HeroCarousel({ onAdd }) {
                 : "opacity-0 translate-y-3 pointer-events-none"
             }`}
           >
-            {/* Panel de vidrio esmerilado adaptado para Light Luxury */}
+            {/* Tarjeta blanca sólida con sombra dramática */}
             <div className="relative order-1 md:order-2 flex items-center justify-center">
-              <div className="relative w-full max-w-[280px] aspect-square bg-white/60 backdrop-blur-md border border-white/80 rounded-3xl flex items-center justify-center shadow-xl">
-                <div className="w-full h-full flex items-center justify-center bg-white rounded-[20px] m-2 shadow-sm">
+              <div className="relative w-full max-w-[280px] aspect-square bg-white border border-white rounded-3xl flex items-center justify-center shadow-2xl">
+                <div className="w-full h-full flex items-center justify-center bg-white rounded-[20px] m-2">
                   <ProductImage product={product} size={170} />
                 </div>
               </div>
             </div>
 
-            {/* Info del producto + CTA */}
             <div className="order-2 md:order-1 text-center md:text-left">
               <p className="text-[10px] tracking-[0.2em] uppercase text-secondary font-bold mb-2">
                 {product.category === "arabe" ? "Perfumería árabe" : "Diseñador"}
@@ -98,13 +97,7 @@ export default function HeroCarousel({ onAdd }) {
                   onClick={() => handleAdd(product.id)}
                   className="cursor-pointer inline-flex items-center gap-2 bg-accent text-onPrimary px-6 py-3 rounded-btn text-xs font-semibold tracking-wide uppercase hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
-                  {justAdded && i === index ? (
-                    <>
-                      <CheckIcon /> Añadido
-                    </>
-                  ) : (
-                    "Añadir al carrito"
-                  )}
+                  {justAdded && i === index ? "Añadido" : "Añadir al carrito"}
                 </button>
               </div>
             </div>
@@ -112,28 +105,21 @@ export default function HeroCarousel({ onAdd }) {
         ))}
       </div>
 
+{/* Navegación del carrusel (Slots en gris) */}
       {FEATURED_PRODUCTS.length > 1 && (
-        <div className="relative flex items-center justify-center gap-2 mt-8">
+        <div className="relative flex items-center justify-center gap-2.5 mt-12 md:mt-16">
           {FEATURED_PRODUCTS.map((_, i) => (
             <button
               key={i}
               onClick={() => goTo(i)}
               aria-label={`Ver producto destacado ${i + 1}`}
-              className={`cursor-pointer h-1.5 rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
-                i === index ? "w-6 bg-accent" : "w-1.5 bg-ink/25 hover:bg-ink/50"
+              className={`cursor-pointer h-2 rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring shadow-sm ${
+                i === index ? "w-8 bg-accent" : "w-2 bg-gray-300 hover:bg-gray-400"
               }`}
             />
           ))}
         </div>
       )}
     </header>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-      <polyline points="20 6 9 17 4 12" />
-    </svg>
   );
 }
