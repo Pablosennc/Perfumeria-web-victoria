@@ -5,15 +5,15 @@
 @tailwind utilities;
 
 :root {
-  /* Color Palette — MASTER.md (Luxury/Premium, gold sobre negro) */
+  /* Color Palette — Light Luxury (Fondo perla, texto carbón, botones dorados) */
   --color-primary: #d4af37;
   --color-on-primary: #000000;
   --color-secondary: #b8860b;
-  --color-accent: #f5c518;
-  --color-background: #0a0a0a;
-  --color-foreground: #fdfbf7;
-  --color-muted: #1a1a1a;
-  --color-border: #333333;
+  --color-accent: #d4af37;
+  --color-background: #fdfbf7;
+  --color-foreground: #1a1a1a;
+  --color-muted: #f3f0ea;
+  --color-border: #e5e0d8;
   --color-destructive: #dc2626;
   --color-ring: #d4af37;
 

@@ -45,11 +45,11 @@ export default function HeroCarousel({ onAdd }) {
     <header
       onMouseEnter={stopTimer}
       onMouseLeave={startTimer}
-      className="relative overflow-hidden px-6 md:px-10 pt-3xl pb-3xl md:pt-3xl md:pb-3xl bg-hero-radial"
+      className="relative overflow-hidden px-6 md:px-10 pt-3xl pb-3xl md:pt-3xl md:pb-3xl bg-gradient-to-b from-white to-muted"
     >
-      {/* Resplandores de fondo (primary/secondary) — atmósfera "liquid glass" oscura, según mood de MASTER.md */}
-      <div className="absolute -top-24 -left-16 w-72 h-72 rounded-full bg-primary/25 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -right-16 w-72 h-72 rounded-full bg-secondary/25 blur-3xl pointer-events-none" />
+      {/* Resplandores de fondo suaves */}
+      <div className="absolute -top-24 -left-16 w-72 h-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -right-16 w-72 h-72 rounded-full bg-secondary/10 blur-3xl pointer-events-none" />
 
       <p className="relative text-center text-[11px] tracking-[0.28em] uppercase text-accent font-bold mb-8 md:mb-2xl">
         Favoritos de la casa
@@ -66,16 +66,16 @@ export default function HeroCarousel({ onAdd }) {
                 : "opacity-0 translate-y-3 pointer-events-none"
             }`}
           >
-            {/* Panel de vidrio esmerilado con la foto — efecto "Liquid Glass" pedido en MASTER.md */}
+            {/* Panel de vidrio esmerilado adaptado para Light Luxury */}
             <div className="relative order-1 md:order-2 flex items-center justify-center">
-              <div className="relative w-full max-w-[280px] aspect-square bg-white/10 backdrop-blur-md border border-white/15 rounded-3xl flex items-center justify-center shadow-xl">
-                <div className="w-full h-full flex items-center justify-center bg-white rounded-[20px] m-2">
+              <div className="relative w-full max-w-[280px] aspect-square bg-white/60 backdrop-blur-md border border-white/80 rounded-3xl flex items-center justify-center shadow-xl">
+                <div className="w-full h-full flex items-center justify-center bg-white rounded-[20px] m-2 shadow-sm">
                   <ProductImage product={product} size={170} />
                 </div>
               </div>
             </div>
 
-            {/* Info del producto + CTA de compra directa (arriba del pliegue, según Page Pattern de MASTER.md) */}
+            {/* Info del producto + CTA */}
             <div className="order-2 md:order-1 text-center md:text-left">
               <p className="text-[10px] tracking-[0.2em] uppercase text-secondary font-bold mb-2">
                 {product.category === "arabe" ? "Perfumería árabe" : "Diseñador"}
@@ -85,7 +85,7 @@ export default function HeroCarousel({ onAdd }) {
               </h1>
               <p className="text-ink/60 text-sm mb-3">{product.brand}</p>
               <div className="flex justify-center md:justify-start mb-4">
-                <StarRating rating={product.rating} reviewCount={product.reviewCount} size={14} onDark />
+                <StarRating rating={product.rating} reviewCount={product.reviewCount} size={14} />
               </div>
               <p className="text-ink/60 text-sm leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
                 {product.note}
