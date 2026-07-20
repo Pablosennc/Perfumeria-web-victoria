@@ -1,26 +1,32 @@
 /**
  * Muestra una calificación de 0 a 5 como estrellas (soporta medias estrellas)
  * más la cifra y, opcionalmente, la cantidad de reseñas.
+ *
+ * @param {boolean} onDark - true cuando se usa sobre un fondo oscuro (ej. el
+ *   carrusel del hero), para que el texto y el contorno mantengan contraste.
  */
-export default function StarRating({ rating, reviewCount, size = 13 }) {
+export default function StarRating({ rating, reviewCount, size = 13, onDark = false }) {
   const stars = Array.from({ length: 5 }, (_, i) => {
     const fillPercent = Math.max(0, Math.min(1, rating - i)) * 100;
     return fillPercent;
   });
+
+  const outlineClass = onDark ? "text-white/25" : "text-line";
+  const countClass = onDark ? "text-white/70" : "text-ink/60";
 
   return (
     <div className="flex items-center gap-1.5">
       <div className="flex items-center gap-0.5" style={{ width: size * 5 }}>
         {stars.map((fillPercent, i) => (
           <div key={i} className="relative" style={{ width: size, height: size }}>
-            <StarOutline size={size} className="absolute inset-0 text-brand-borderLight" />
+            <StarOutline size={size} className={`absolute inset-0 ${outlineClass}`} />
             <div className="absolute inset-0 overflow-hidden" style={{ width: `${fillPercent}%` }}>
-              <StarOutline size={size} filled className="text-brand-goldDark" />
+              <StarOutline size={size} filled className="text-accent" />
             </div>
           </div>
         ))}
       </div>
-      <span className="text-[11px] text-brand-inkMuted">
+      <span className={`text-[11px] ${countClass}`}>
         {rating.toFixed(1)}
         {typeof reviewCount === "number" && ` (${reviewCount})`}
       </span>

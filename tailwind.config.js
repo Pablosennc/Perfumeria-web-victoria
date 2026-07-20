@@ -4,32 +4,46 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Paleta derivada del logo de Julio Joyas (negro + degrade dorado/ambar)
-        brand: {
-          black: "#0a0a0a",
-          panel: "#141210",
-          panel2: "#1c1815",
-          line: "rgba(227, 167, 59, 0.18)",
-          gold: "#e3a73b",
-          goldLight: "#f5c97a",
-          goldDark: "#b9711e",
-          ivory: "#f4ede0",
-          muted: "#a89c8a",
-          // Paleta clara: zona de catálogo y carrito, pensada para que
-          // las fotos de producto con fondo blanco se integren sin recuadros.
-          cream: "#faf8f4",
-          paper: "#ffffff",
-          ink: "#171310",
-          inkMuted: "#8a7d6c",
-          borderLight: "rgba(23, 19, 16, 0.09)",
-        },
+        // Mapeados 1:1 a las variables CSS definidas en src/index.css,
+        // que a su vez vienen directo de la tabla "Color Palette" de MASTER.md
+        primary: "var(--color-primary)",
+        onPrimary: "var(--color-on-primary)",
+        secondary: "var(--color-secondary)",
+        accent: "var(--color-accent)",
+        surface: "var(--color-background)",
+        ink: "var(--color-foreground)",
+        muted: "var(--color-muted)",
+        line: "var(--color-border)",
+        danger: "var(--color-destructive)",
+        ring: "var(--color-ring)",
       },
       fontFamily: {
-        display: ["'Cormorant Garamond'", "serif"],
-        body: ["'Manrope'", "sans-serif"],
+        display: ["'Space Grotesk'", "sans-serif"],
+        sans: ["'Inter'", "sans-serif"],
+      },
+      spacing: {
+        xs: "var(--space-xs)",
+        sm: "var(--space-sm)",
+        md: "var(--space-md)",
+        lg: "var(--space-lg)",
+        xl: "var(--space-xl)",
+        "2xl": "var(--space-2xl)",
+        "3xl": "var(--space-3xl)",
+      },
+      boxShadow: {
+        sm: "var(--shadow-sm)",
+        md: "var(--shadow-md)",
+        lg: "var(--shadow-lg)",
+        xl: "var(--shadow-xl)",
+      },
+      borderRadius: {
+        btn: "8px",
+        card: "12px",
+        modal: "16px",
       },
       backgroundImage: {
-        "gold-gradient": "linear-gradient(180deg, #f5c97a 0%, #e3a73b 45%, #b9711e 100%)",
+        "accent-gradient": "linear-gradient(135deg, var(--color-secondary), var(--color-accent))",
+        "hero-radial": "radial-gradient(ellipse at 50% -10%, #1e293b 0%, #0F172A 60%)",
       },
     },
   },

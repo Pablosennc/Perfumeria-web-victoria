@@ -19,10 +19,7 @@ export default function App() {
   }, [category]);
 
   return (
-    <div className="min-h-screen flex flex-col relative">
-      {/* Marco fino dorado alrededor de toda la página — efecto "caja de joyería". */}
-      <div className="fixed inset-2 md:inset-3 border border-brand-gold/15 pointer-events-none z-30" />
-
+    <div className="min-h-screen flex flex-col bg-surface">
       <Navbar totalItems={cart.totalItems} onCartClick={() => setIsCartOpen(true)} />
       <HeroCarousel onAdd={cart.addItem} />
 
