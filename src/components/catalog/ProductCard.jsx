@@ -13,8 +13,8 @@ export default function ProductCard({ product, index, onAdd }) {
   }
 
   return (
-    <div className="group flex flex-col bg-surface border border-line rounded-card p-3.5 md:p-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
-      <div className="h-28 md:h-40 flex items-center justify-center mb-3 bg-muted rounded-lg">
+    <div className="group flex flex-col bg-muted border border-line rounded-card p-3.5 md:p-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
+      <div className="h-28 md:h-40 flex items-center justify-center mb-3 bg-white border border-primary/20 rounded-lg">
         <ProductImage product={product} size={90} />
       </div>
 
@@ -44,7 +44,7 @@ export default function ProductCard({ product, index, onAdd }) {
           className={`cursor-pointer inline-flex items-center gap-1.5 px-3 md:px-4 py-1.5 md:py-2 rounded-btn text-[11px] md:text-xs font-semibold whitespace-nowrap transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
             justAdded
               ? "bg-primary text-onPrimary"
-              : "bg-accent text-white hover:opacity-90 hover:-translate-y-px"
+              : "bg-accent text-onPrimary hover:opacity-90 hover:-translate-y-px"
           }`}
         >
           {justAdded ? (

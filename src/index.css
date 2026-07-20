@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Color Palette — MASTER.md */
-  --color-primary: #2563eb;
-  --color-on-primary: #ffffff;
-  --color-secondary: #7c3aed;
-  --color-accent: #ec4899;
-  --color-background: #ffffff;
-  --color-foreground: #0f172a;
-  --color-muted: #f1f5fd;
-  --color-border: #e4ecfc;
+  /* Color Palette — MASTER.md (Luxury/Premium, gold sobre negro) */
+  --color-primary: #d4af37;
+  --color-on-primary: #000000;
+  --color-secondary: #b8860b;
+  --color-accent: #f5c518;
+  --color-background: #0a0a0a;
+  --color-foreground: #fdfbf7;
+  --color-muted: #1a1a1a;
+  --color-border: #333333;
   --color-destructive: #dc2626;
-  --color-ring: #2563eb;
+  --color-ring: #d4af37;
 
   /* Spacing */
   --space-xs: 4px;

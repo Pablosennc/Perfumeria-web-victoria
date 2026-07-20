@@ -17,19 +17,19 @@
 ### Color Palette
 
 | Role | Hex | CSS Variable |
-|------|-----|--------------|
-| Primary | `#2563EB` | `--color-primary` |
-| On Primary | `#FFFFFF` | `--color-on-primary` |
-| Secondary | `#7C3AED` | `--color-secondary` |
-| Accent/CTA | `#EC4899` | `--color-accent` |
-| Background | `#FFFFFF` | `--color-background` |
-| Foreground | `#0F172A` | `--color-foreground` |
-| Muted | `#F1F5FD` | `--color-muted` |
-| Border | `#E4ECFC` | `--color-border` |
+|---|---|---|
+| Primary | `#D4AF37` | `--color-primary` |
+| On Primary | `#000000` | `--color-on-primary` |
+| Secondary | `#B8860B` | `--color-secondary` |
+| Accent/CTA | `#F5C518` | `--color-accent` |
+| Background | `#0A0A0A` | `--color-background` |
+| Foreground | `#FDFBF7` | `--color-foreground` |
+| Muted | `#1A1A1A` | `--color-muted` |
+| Border | `#333333` | `--color-border` |
 | Destructive | `#DC2626` | `--color-destructive` |
-| Ring | `#2563EB` | `--color-ring` |
+| Ring | `#D4AF37` | `--color-ring` |
 
-**Color Notes:** Brand blue + creator purple
+**Color Notes:** Luxury gold and bronze tones on a deep rich black background. Buttons should be gold with black text.
 
 ### Typography
 

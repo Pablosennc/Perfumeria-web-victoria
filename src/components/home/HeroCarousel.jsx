@@ -80,23 +80,23 @@ export default function HeroCarousel({ onAdd }) {
               <p className="text-[10px] tracking-[0.2em] uppercase text-secondary font-bold mb-2">
                 {product.category === "arabe" ? "Perfumería árabe" : "Diseñador"}
               </p>
-              <h1 className="font-display text-3xl md:text-5xl font-semibold leading-tight text-white mb-2">
+              <h1 className="font-display text-3xl md:text-5xl font-semibold leading-tight text-ink mb-2">
                 {product.name}
               </h1>
-              <p className="text-white/60 text-sm mb-3">{product.brand}</p>
+              <p className="text-ink/60 text-sm mb-3">{product.brand}</p>
               <div className="flex justify-center md:justify-start mb-4">
                 <StarRating rating={product.rating} reviewCount={product.reviewCount} size={14} onDark />
               </div>
-              <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
+              <p className="text-ink/60 text-sm leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
                 {product.note}
               </p>
               <div className="flex items-center justify-center md:justify-start gap-4">
-                <span className="font-display text-2xl text-white font-bold">
+                <span className="font-display text-2xl text-ink font-bold">
                   {formatCLP(product.price)}
                 </span>
                 <button
                   onClick={() => handleAdd(product.id)}
-                  className="cursor-pointer inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-btn text-xs font-semibold tracking-wide uppercase hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  className="cursor-pointer inline-flex items-center gap-2 bg-accent text-onPrimary px-6 py-3 rounded-btn text-xs font-semibold tracking-wide uppercase hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
                   {justAdded && i === index ? (
                     <>
@@ -120,7 +120,7 @@ export default function HeroCarousel({ onAdd }) {
               onClick={() => goTo(i)}
               aria-label={`Ver producto destacado ${i + 1}`}
               className={`cursor-pointer h-1.5 rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
-                i === index ? "w-6 bg-accent" : "w-1.5 bg-white/25 hover:bg-white/50"
+                i === index ? "w-6 bg-accent" : "w-1.5 bg-ink/25 hover:bg-ink/50"
               }`}
             />
           ))}

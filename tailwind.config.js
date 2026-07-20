@@ -43,7 +43,7 @@ export default {
       },
       backgroundImage: {
         "accent-gradient": "linear-gradient(135deg, var(--color-secondary), var(--color-accent))",
-        "hero-radial": "radial-gradient(ellipse at 50% -10%, #1e293b 0%, #0F172A 60%)",
+        "hero-radial": "radial-gradient(ellipse at 50% -10%, #2a1f08 0%, #0a0a0a 60%)",
       },
     },
   },

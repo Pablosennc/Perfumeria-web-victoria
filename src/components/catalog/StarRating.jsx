@@ -11,8 +11,8 @@ export default function StarRating({ rating, reviewCount, size = 13, onDark = fa
     return fillPercent;
   });
 
-  const outlineClass = onDark ? "text-white/25" : "text-line";
-  const countClass = onDark ? "text-white/70" : "text-ink/60";
+  const outlineClass = "text-ink/25";
+  const countClass = "text-ink/70";
 
   return (
     <div className="flex items-center gap-1.5">

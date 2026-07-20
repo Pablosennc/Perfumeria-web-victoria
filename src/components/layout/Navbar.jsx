@@ -1,8 +1,8 @@
 export default function Navbar({ totalItems, onCartClick }) {
   return (
-    <nav className="sticky top-0 z-40 flex items-center justify-between px-6 md:px-10 py-4 text-ink bg-surface/85 backdrop-blur-md border-b border-line">
+    <nav className="sticky top-0 z-40 flex items-center justify-between px-6 md:px-10 py-4 text-ink bg-muted backdrop-blur-md border-b border-line shadow-sm">
       <div className="flex items-center gap-3">
-        {/* Logo: colocar `public/images/logo.png` (usa una imagen cuadrada preferiblemente) */}
+        {/* Logo: coloca el archivo en public/images/logo.png */}
         <img src="src\assets\logo.png" alt="Julio Joyas" className="w-10 h-10 object-cover rounded-full" />
         <div className="font-display text-xl tracking-wide leading-none">
           JULIO <span className="text-accent">JOYAS</span>
@@ -26,12 +26,12 @@ export default function Navbar({ totalItems, onCartClick }) {
       <button
         onClick={onCartClick}
         aria-label="Abrir carrito"
-        className="cursor-pointer relative flex items-center gap-2 border border-line rounded-full px-4 py-2 text-sm hover:border-primary hover:bg-muted transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        className="cursor-pointer relative flex items-center gap-2 border border-line rounded-full px-4 py-2 text-sm hover:border-primary hover:bg-primary/10 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
         <CartIcon />
         <span className="hidden sm:inline">Carrito</span>
         {totalItems > 0 && (
-          <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-accent text-white text-[11px] font-bold flex items-center justify-center">
+          <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-accent text-onPrimary text-[11px] font-bold flex items-center justify-center">
             {totalItems}
           </span>
         )}

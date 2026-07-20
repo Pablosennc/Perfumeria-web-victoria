@@ -23,7 +23,7 @@ export default function CartDrawer({ isOpen, onClose, cart }) {
       <aside
         role="dialog"
         aria-label="Carrito de compras"
-        className={`fixed top-0 right-0 h-full w-[400px] max-w-[92vw] bg-surface text-ink shadow-xl z-[60] flex flex-col transition-transform duration-300 rounded-l-modal ${
+        className={`fixed top-0 right-0 h-full w-[400px] max-w-[92vw] bg-muted text-ink shadow-xl z-[60] flex flex-col transition-transform duration-300 rounded-l-modal ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -41,7 +41,7 @@ export default function CartDrawer({ isOpen, onClose, cart }) {
         <div className="flex-1 overflow-y-auto px-6">
           {items.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center text-ink/50 gap-3 py-10">
-              <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-secondary">
+              <div className="w-12 h-12 rounded-full bg-surface flex items-center justify-center text-secondary">
                 <EmptyCartIcon />
               </div>
               <p className="text-ink">Tu carrito está vacío.</p>
@@ -76,7 +76,7 @@ export default function CartDrawer({ isOpen, onClose, cart }) {
             </div>
             <button
               onClick={handleCheckout}
-              className="cursor-pointer w-full bg-accent hover:opacity-90 text-white py-3.5 rounded-btn text-xs font-semibold tracking-wide uppercase transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="cursor-pointer w-full bg-accent hover:opacity-90 text-onPrimary py-3.5 rounded-btn text-xs font-semibold tracking-wide uppercase transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               {checkoutMessage ? "Disponible en la versión final" : "Continuar compra"}
             </button>

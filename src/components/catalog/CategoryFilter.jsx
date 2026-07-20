@@ -2,7 +2,7 @@ import { CATEGORIES } from "../../data/products.js";
 
 export default function CategoryFilter({ active, onChange, resultCount }) {
   return (
-    <section id="catalogo" className="max-w-6xl mx-auto px-6 md:px-10 mt-2xl mb-lg">
+    <section id="catalogo" className="max-w-6xl mx-auto px-6 md:px-10 mt-3xl md:mt-[80px] mb-lg">
       {/* Búsqueda: preview visual, aún no funcional a propósito para el MVP de mañana. */}
       <div className="relative mb-md">
         <svg
@@ -19,7 +19,7 @@ export default function CategoryFilter({ active, onChange, resultCount }) {
           type="text"
           disabled
           placeholder="Buscar por nombre o marca..."
-          className="w-full pl-10 pr-4 py-3 rounded-btn border border-[#E2E8F0] bg-muted text-sm text-ink/50 placeholder:text-ink/40 cursor-not-allowed"
+          className="w-full pl-10 pr-4 py-3 rounded-btn border border-line bg-muted text-sm text-ink/50 placeholder:text-ink/40 cursor-not-allowed"
         />
       </div>
 

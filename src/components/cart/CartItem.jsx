@@ -6,7 +6,7 @@ export default function CartItem({ item, onIncrement, onDecrement, onRemove }) {
 
   return (
     <div className="flex gap-3.5 py-4 border-b border-line">
-      <div className="w-14 flex-shrink-0 bg-muted rounded-md flex items-center justify-center">
+      <div className="w-14 flex-shrink-0 bg-white border border-primary/20 rounded-md flex items-center justify-center">
         <ProductImage product={product} size={44} />
       </div>
       <div className="flex-1 min-w-0">
