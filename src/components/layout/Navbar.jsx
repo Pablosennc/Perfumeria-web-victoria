@@ -1,9 +1,10 @@
+
 export default function Navbar({ totalItems, onCartClick }) {
   return (
     <nav className="sticky top-0 z-40 flex items-center justify-between px-6 md:px-10 py-4 bg-[#0A0A0A] text-white border-b border-white/10 shadow-md">
       <div className="flex items-center gap-3">
         {/* Logo: coloca el archivo en public/images/logo.png */}
-        <img src="src\assets\logo.png" alt="Julio Joyas" className="w-10 h-10 object-cover rounded-full shadow-sm" />
+        <img src="/public/logo.png" alt="Julio Joyas" className="w-10 h-10 object-cover rounded-full shadow-sm" />
         <div className="font-display text-xl tracking-wide leading-none">
           JULIO <span className="text-accent">JOYAS</span>
         </div>
