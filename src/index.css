@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Color Palette — Light Luxury (Fondo perla, texto carbón, botones dorados) */
+  /* Paleta clara/dorada — reconstruida a partir de lo que ya está en pantalla
+     (fondo crema #F5F2EB de HeroCarousel, dorado de los botones, etc.),
+     NO la paleta 100% negra del MASTER.md. */
   --color-primary: #d4af37;
   --color-on-primary: #000000;
   --color-secondary: #b8860b;
-  --color-accent: #d4af37;
+  --color-accent: #f5c518;
   --color-background: #fdfbf7;
-  --color-foreground: #1a1a1a;
-  --color-muted: #f3f0ea;
-  --color-border: #e5e0d8;
+  --color-foreground: #0f172a;
+  --color-muted: #f5f2eb;
+  --color-border: #e5dfd2;
   --color-destructive: #dc2626;
   --color-ring: #d4af37;
 
@@ -43,14 +45,14 @@ body {
   color: var(--color-foreground);
 }
 
-/* Anti-patrón: "Instant state changes" — transición base para cualquier elemento interactivo */
+/* Transiciones base para elementos interactivos (anti-patrón: cambios instantáneos) */
 button,
 a,
 input {
   transition: all 200ms ease;
 }
 
-/* Anti-patrón: "Invisible focus states" — foco visible y consistente en toda la app */
+/* Foco visible y consistente (anti-patrón: foco invisible) */
 :focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px var(--color-ring);
@@ -66,4 +68,25 @@ input {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.9s ease both;
+}
+
+/* Oculta la scrollbar del carrusel de destacados (WebKit); scrollbarWidth
+   inline ya cubre Firefox. El scroll sigue funcionando normalmente. */
+.snap-x::-webkit-scrollbar {
+  display: none;
 }

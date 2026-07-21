@@ -45,7 +45,7 @@ export default function HeroCarousel({ onAdd }) {
     <header
       onMouseEnter={stopTimer}
       onMouseLeave={startTimer}
-      className="relative overflow-hidden px-6 md:px-10 pt-3xl pb-3xl md:pt-3xl md:pb-3xl bg-[#F5F2EB] border-b border-line"
+      className="relative overflow-hidden px-6 md:px-10 pt-3xl pb-3xl md:pt-3xl md:pb-3xl bg-muted border-b border-line"
     >
       {/* Resplandores de fondo sutiles */}
       <div className="absolute -top-24 -left-16 w-72 h-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
@@ -55,12 +55,12 @@ export default function HeroCarousel({ onAdd }) {
         Favoritos de la casa
       </p>
 
-      <div className="relative max-w-5xl mx-auto min-h-[380px] md:min-h-[320px]">
+      <div className="relative max-w-5xl mx-auto grid">
         {FEATURED_PRODUCTS.map((product, i) => (
           <div
             key={product.id}
             aria-hidden={i !== index}
-            className={`absolute inset-0 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center transition-all duration-500 ease-out ${
+            className={`[grid-area:1/1] grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center transition-all duration-500 ease-out ${
               i === index
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-3 pointer-events-none"
@@ -114,7 +114,7 @@ export default function HeroCarousel({ onAdd }) {
               onClick={() => goTo(i)}
               aria-label={`Ver producto destacado ${i + 1}`}
               className={`cursor-pointer h-2 rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring shadow-sm ${
-                i === index ? "w-8 bg-accent" : "w-2 bg-gray-300 hover:bg-gray-400"
+                i === index ? "w-8 bg-accent" : "w-2 bg-line hover:bg-primary/40"
               }`}
             />
           ))}
